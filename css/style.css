@@ -1,0 +1,133 @@
+.hero {
+    width: 100%;
+    background: url(../assets/images/hero-bg.png) no-repeat top center / cover;
+
+    & nav {
+        width: 70rem;
+        margin-inline: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-top: 3.5rem;
+
+        & a {
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            background: var(--pink-dark);
+            font: var(--button);
+            color: var(--text-title);
+
+            position: relative;
+            overflow: hidden;
+            
+            z-index: 0;
+            
+            &::before {
+                content: '';
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                background: var(--pink-base);
+                
+                position: absolute;
+                top: 0;
+                left: 30%;
+                z-index: -1;
+
+                transform: scale(0);
+                opacity: 0;
+                transition: transform 700ms, opacity 700ms;
+            }
+
+            &:hover::before {
+                transform: scale(3);
+                opacity: 1;
+            }
+        }
+    }
+
+    & .title {
+        max-width: 41rem;
+        text-align: center;
+
+        margin: 10.25rem auto 35.375rem;
+
+        & h1 {
+            color: var(--text-title);
+            font: var(--title-lg);
+        }
+
+        & h2 {
+            max-width: 35.5rem;
+            margin-inline: auto;
+
+            color: var(--text-body);
+            font: var(--body-lg);
+            margin-top: 2rem;
+        }
+    }
+
+    & section {
+        height: 100vh;
+
+        & .description {
+            max-width: 75rem;
+            margin-inline: auto;
+
+            padding-block: 7.125rem 9.875rem;
+            padding-inline: 2rem;
+
+            position: relative;
+
+            & p {
+                text-align: center;
+                font: var(--subtitle);
+                color: var(--text-title);
+
+                & span {
+                    color: var(--blue-light);
+                    font-weight: 600;
+                }
+            }
+
+            & img {
+                position: absolute;
+                transition: scale 300ms linear, rotate 300ms linear;
+
+                &[src*="opened-spellbook"] {
+                    width: 5.5rem;
+                    height: 5.5rem;
+                    top: 0;
+                    left: 45%;
+
+                    transform: rotate(20deg);
+                }
+
+                &[src*="ouija-planchette"] {
+                    width: 5rem;
+                    height: 5rem;
+                    bottom: 20%;
+                    left: 3.5%;
+
+                    transform: rotate(100deg);
+                }
+
+                &[src*="crystal-ball"] {
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    bottom: 22%;
+                    right: 0;
+
+                    transform: rotate(-15deg);
+                }
+
+                &:hover {
+                    scale: 1.1;
+                    rotate: 5deg;
+                }
+            }
+        }
+    }
+}
