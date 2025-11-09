@@ -175,6 +175,45 @@
     }
 }
 
+.month-kit {
+    width: 100%;
+    height: 100vh;
+
+    background: url(../assets/images/month-kit-bg.png) no-repeat center / cover;
+
+    & .main-text {
+        width: 32.25rem;
+        margin: auto;
+
+        display: grid;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
+
+        padding-top: 14.7rem;
+        
+        & .title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            & img {
+                filter: drop-shadow(0 0 28px rgba(143, 59, 158, 0.5));
+            }
+
+            & h2 {
+                font: var(--title-sm);
+                color: var(--text-title);
+            }
+        }
+
+        & h3 {
+            font: var(--body-md);
+            color: var(--text-body);
+        }
+    }
+}
+
 @keyframes appear {
     to {
         opacity: 1;
