@@ -1,6 +1,9 @@
 .hero {
     width: 100%;
     background: url(../assets/images/hero-bg.png) no-repeat top center / cover;
+    opacity: 0;
+
+    animation: appear 1s linear forwards;
 
     & nav {
         width: 70rem;
@@ -57,6 +60,9 @@
         & h1 {
             color: var(--text-title);
             font: var(--title-lg);
+            opacity: 0;
+
+            animation: appear 1s 500ms linear forwards;
         }
 
         & h2 {
@@ -66,6 +72,9 @@
             color: var(--text-body);
             font: var(--body-lg);
             margin-top: 2rem;
+            opacity: 0;
+
+            animation: appear 1s 800ms linear forwards;
         }
     }
 
@@ -87,6 +96,23 @@
                 color: var(--text-title);
 
                 & span {
+                    opacity: 0.5;
+                    filter: saturate(0);
+                    
+                    &:nth-child(1) {
+                        transition: opacity 300ms linear, filter 300ms linear;
+                    }
+
+                    &:nth-child(2) {
+                        transition: opacity 300ms 400ms linear, filter 300ms 400ms linear;
+                    }
+
+                    &:nth-child(3) {
+                        transition: opacity 300ms 800ms linear, filter 300ms 800ms linear;
+                    }
+                }
+
+                & strong {
                     color: var(--blue-light);
                     font-weight: 600;
                 }
@@ -95,6 +121,8 @@
             & img {
                 position: absolute;
                 transition: scale 300ms linear, rotate 300ms linear;
+                opacity: 0;
+                scale: 0;
 
                 &[src*="opened-spellbook"] {
                     width: 5.5rem;
@@ -102,6 +130,7 @@
                     top: 0;
                     left: 45%;
 
+                    transition: scale 400ms linear, opacity 400ms linear;
                     transform: rotate(20deg);
                 }
 
@@ -111,6 +140,7 @@
                     bottom: 20%;
                     left: 3.5%;
 
+                    transition: scale 400ms 400ms linear, opacity 400ms 400ms linear;
                     transform: rotate(100deg);
                 }
 
@@ -120,6 +150,7 @@
                     bottom: 22%;
                     right: 0;
 
+                    transition: scale 400ms 800ms linear, opacity 400ms 800ms linear;
                     transform: rotate(-15deg);
                 }
 
@@ -128,6 +159,24 @@
                     rotate: 5deg;
                 }
             }
+
+            &:hover {
+                & img {
+                    opacity: 1;
+                    scale: 1;
+                }
+
+                & span {
+                    opacity: 1;
+                    filter: saturate(1);
+                }
+            }
         }
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
     }
 }
