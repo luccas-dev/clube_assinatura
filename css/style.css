@@ -1,6 +1,5 @@
 .hero {
     width: 100%;
-    background: url(../assets/images/hero-bg.png) no-repeat top center / cover;
     opacity: 0;
 
     animation: appear 1s linear forwards;
@@ -79,7 +78,7 @@
     }
 
     & section {
-        height: 100vh;
+        padding-bottom: 5rem;
 
         & .description {
             max-width: 75rem;
@@ -177,20 +176,17 @@
 
 .month-kit {
     width: 100%;
-    height: 100vh;
-
-    background: url(../assets/images/month-kit-bg.png) no-repeat center / cover;
 
     & .main-text {
         width: 32.25rem;
-        margin: auto;
+        margin-inline: auto;
 
         display: grid;
         justify-content: center;
         gap: 5px;
         text-align: center;
 
-        padding-top: 14.7rem;
+        padding-top: 14.68rem;
         
         & .title {
             display: flex;
@@ -210,6 +206,98 @@
         & h3 {
             font: var(--body-md);
             color: var(--text-body);
+        }
+    }
+
+    & .book-kit {
+        padding-top: 8.375rem;
+        padding-bottom: 10.5625rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: relative;
+
+        & img {
+            position: absolute;
+            z-index: -1;
+            transition: translate 500ms ease-in-out, rotate 500ms ease-in-out, transform 500ms 500ms ease-in-out;
+
+            &:nth-child(1) {
+                width: 29.2rem;
+                height: 38.6rem;
+                position: relative;
+                z-index: 0;
+                transition: none;
+                transform: translate(-5%, 0%);
+            }
+
+            &[src*="pin"] {
+                width: 13.9rem;
+            }
+
+            &[src*="bookmark"] {
+                width: 10.75rem;
+                height: 33.5rem;
+            }
+        }
+        & span {
+            position: absolute;
+            color: var(--text-body);
+            font: var(--body-md);
+            z-index: -1;
+            transition: translate 500ms ease-in-out, transform 500ms 500ms ease-in-out;
+        }
+
+        &:hover {
+            & img[src*="pin"] {
+                translate: -130% 110%;
+                rotate: -10deg;
+                transform: translate(5%, -5%);
+            }
+
+            & img[src*="arrow-2"] {
+                translate: -24.40rem 8.25rem;
+                transform: translate(5%, -5%);
+            }
+
+            & .pin-text {
+                translate: -23.75rem 2rem;
+                transform: translate(5%, -5%);
+            }
+
+            & img[src*="bookmark-yellow"] {
+                translate: 144% -23%;
+                rotate: 10deg;
+                transform: translate(-6%, 3%);
+            }
+
+            & img[src*="bookmark-purple"] {
+                translate: 200% 0%;
+                rotate: 20deg;
+                transform: translate(-3%, 3%);
+            }
+
+            & img[src*="arrow-1"] {
+                translate: -19.75rem -19.375rem;
+                transform: translate(5%, 5%);
+            }
+
+            & .book-text {
+                translate: -23.75rem -21.875rem;
+                transform: translate(3%, 3%);
+            }
+
+            & img[src*="arrow-3"] {
+                translate: 18rem 20rem;
+                transform: translate(3%, 3%);
+            }
+
+            & .bookmark-text {
+                translate: 14rem 27rem;
+                transform: translate(3%, 3%);
+            }
         }
     }
 }

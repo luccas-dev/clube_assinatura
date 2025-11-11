@@ -52,7 +52,7 @@
 }
 
 body {
-    background: var(--shape-background);
+    background: url(../assets/images/desktop-bg.png) no-repeat top / cover;
 }
 
 a {
