@@ -2,6 +2,8 @@
     width: 100%;
     opacity: 0;
 
+    background: url(../assets/images/hero-bg.png) no-repeat top;
+
     animation: appear 1s linear forwards;
 
     & nav {
@@ -176,6 +178,7 @@
 
 .month-kit {
     width: 100%;
+    margin-bottom: 17.375rem;
 
     & .main-text {
         width: 32.25rem;
@@ -297,6 +300,384 @@
             & .bookmark-text {
                 translate: 14rem 27rem;
                 transform: translate(3%, 3%);
+            }
+        }
+    }
+}
+
+.pricing {
+    width: 100%;
+    margin-inline: auto;
+
+    background: url(../assets/images/pricing-background.png) no-repeat center/cover;
+
+    padding-top: 12.125rem;
+    padding-bottom: 18.875rem;
+
+    & .title {
+        text-align: center;
+        font: var(--title-sm);
+        color: var(--text-title);
+    }
+
+    & .cards {
+        width: 65.625rem;
+        height: 100vh;
+
+        margin-top: 3.5rem;
+        margin-inline: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        & .star {
+            position: absolute;
+
+            &:nth-child(4) {
+                width: 1.625rem;
+                height: 1.625rem;
+                top: 5rem;
+                left: 21.5rem;
+            }
+
+            &:nth-child(5) {
+                width: 0.8125rem;
+                height: 0.8125rem;
+                top: 7rem;
+                left: 21rem;
+            }
+
+            &:nth-child(6) {
+                width: 1.4375rem;
+                height: 1.4375rem;
+                bottom: 4.5rem;
+                right: 22rem;
+            }
+
+            &:nth-child(7) {
+                width: 0.6875rem;
+                height: 0.6875rem;
+                bottom: 4.3rem;
+                right: 24.5rem;
+            }
+        }
+
+
+        & .card {
+            max-width: 18rem;
+            min-height: 26rem;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            position: absolute;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & header {
+                & h3 {
+                    font: var(--title-xs);
+                    margin-bottom: 1.5rem;
+                }
+
+                & .price {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    & span {
+                        font: var(--title-md);
+                        color: var(--text-title);
+                        & small {
+                            font: var(--title-xs);
+                            color: var(--text-title);
+                        }
+                    }
+
+                    & small {
+                        font: var(--body-sm);
+                        color: var(--text-label);
+                    }
+                }
+            }
+
+            & .benefits {
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+
+                    list-style: none;
+                    margin-bottom: 1.5rem;
+
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+
+                        & span {
+                            font: var(--body-xs);
+                            color: var(--text-body);
+                        }
+                    }
+
+                    & li img {
+                        width: 0.875rem;
+                        height: 0.875rem;
+                    }
+                }
+
+                & button {
+                    position: relative;
+                    z-index: 0;
+                    overflow: hidden;
+                }
+            }
+
+            &.card-1 {
+                z-index: 2;
+                background: var(--shape-hover);
+                position: relative;
+
+                & img[src*="bunny"] {
+                    width: 3rem;
+                    height: 3rem;
+                    position: absolute;
+                    top: -3rem;
+                }
+
+                & header {
+                    position: relative;
+
+                    & h3 {
+                        color: var(--pink-light);
+                    }
+
+                    & .tag {
+                        padding: 0.5625rem 1.25rem;
+                        border-radius: 50rem;
+                        background: var(--shape-stroke);
+                        font: var(--tag);
+                        color: var(--text-body);
+
+                        position: absolute;
+                        top: -0.5rem;
+                        right: 0;
+                    }
+                }
+
+                & .benefits {
+                    & button {
+                        background: var(--pink-dark);
+
+                        &::before {
+                            content: '';
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 50%;
+                            background: var(--pink-base);
+                            
+                            position: absolute;
+                            top: 0;
+                            left: 40%;
+                            z-index: -1;
+
+                            transform: scale(0);
+                            opacity: 0;
+                            transition: transform 700ms, opacity 700ms;
+                        }
+
+                        &:hover::before {
+                            transform: scale(6);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &:hover {
+                    translate: 0 -3rem;
+                    box-shadow: 0 0 3rem var(--shape-hover);
+                }
+            }
+
+            &.card-2, &.card-3 {
+                background: var(--shape-base);
+                outline: 1px solid var(--shape-stroke);
+
+                & header {
+                    & h3 {
+                        color: var(--blue-light);
+                    }
+                }
+
+                & .benefits {
+                    & ul {
+                        & li img {
+                            filter: invert(20%) sepia(80%) saturate(979%) hue-rotate(175deg) brightness(93%) contrast(90%);
+                        }
+                    }
+                    
+                    & button {
+                        background: var(--blue-dark);
+
+                        &::before {
+                            content: '';
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 50%;
+                            background: var(--blue-base);
+                            
+                            position: absolute;
+                            top: 0;
+                            left: 40%;
+                            z-index: -1;
+
+                            transform: scale(0);
+                            opacity: 0;
+                            transition: transform 700ms, opacity 700ms;
+                        }
+
+                        &:hover::before {
+                            transform: scale(6);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &.card-2:hover {
+                & ~ .star:nth-child(4), & ~ .star:nth-child(5) {
+                    rotate: 8deg;
+                }
+            }
+
+            &.card-3:hover {
+                & ~ .star:nth-child(6), & ~ .star:nth-child(7) {
+                    rotate: 16deg;
+                }
+            }
+
+            &.card-2:hover, &.card-3:hover {
+                background: var(--shape-hover);
+                box-shadow: 0 0 3rem var(--shape-hover);
+                transform: translateY(-0.5rem);
+                outline: none;
+                z-index: 10;
+
+                & ~ .card-1 {
+                    background: var(--shape-base);
+                    outline: 1px solid var(--shape-stroke);
+                }
+            }
+        }
+
+        & .card-1, & .card-2, & .card-3, & .star {
+            transition: translate 500ms ease, rotate 500ms ease, box-shadow 500ms ease, outline 500ms ease, background 500ms ease, z-index 500ms ease, transform 500ms ease;
+        }
+
+        &:hover {
+            & .card-1 {
+                translate: 0 -2rem;
+            }
+
+            & .card-2 {
+                translate: -17.5rem 1.5rem;
+                rotate: -8deg;
+            }
+
+            & .card-3 {
+                translate: 17.5rem 1.5rem;
+                rotate: 8deg;
+            }
+
+            & .star {
+                &:nth-child(4), &:nth-child(5) {
+                    translate: -18.5rem 1.5rem;
+                    rotate: -8deg;
+                }
+
+                &:nth-child(6), &:nth-child(7){
+                    translate: 17.5rem 1.5rem;
+                    rotate: 8deg;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: url(../assets/images/book-trace-background.png) no-repeat center / cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10.625rem 10rem 6.375rem;
+
+    & .brand {
+        max-width: 16.5rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        & .separator {
+            height: 1px;
+            background-color: var(--shape-stroke);
+        }
+
+        & .social-medias {
+            width: 100%;
+            display: flex;
+
+            & a {
+                width: 2.5rem;
+                height: 2.5rem;
+                transition: background 400ms linear, filter 500ms linear;
+                border-radius: 50%;
+                
+                & img {
+                    padding: .5rem;
+                    filter: invert(12%) sepia(20%) saturate(4754%) hue-rotate(185deg) brightness(95%) contrast(105%);
+                }
+
+                &:hover {
+                    background: var(--shape-stroke);
+
+                    & img {
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+
+    & .links {
+        display: flex;
+        gap: 3.5rem;
+
+        & h3 {
+            font: var(--title-xs);
+            color: var(--text-body);
+            margin-bottom: 1.25rem;
+        }
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            & li a {
+                font: var(--link);
+                color: var(--blue-light);
+                transition: color 500ms ease;
+            }
+
+            & li:hover a {
+                color: #fff;
             }
         }
     }
