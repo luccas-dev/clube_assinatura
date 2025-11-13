@@ -53,6 +53,19 @@
 
 body {
     background: url(../assets/images/desktop-bg.png) no-repeat top / cover;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: var(--shape-background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--pink-low);
+        border-radius: 8px;
+    }
 }
 
 a {
