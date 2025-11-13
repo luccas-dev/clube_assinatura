@@ -609,7 +609,7 @@
 }
 
 footer {
-    background: url(../assets/images/book-trace-background.png) no-repeat center / cover;
+    background: url(../assets/images/book-trace-background.png) no-repeat top / cover;
 
     display: flex;
     align-items: center;
