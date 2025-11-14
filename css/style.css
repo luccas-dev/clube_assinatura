@@ -838,13 +838,14 @@ footer {
         }
 
         & .title {
-            margin: 3.25rem auto 14rem;
+            margin: 5.25rem auto 14rem;
             & h1 {
-                font: var(--title-sm);
+                font: 700 1.75rem var(--ff-base);
             }
 
             & h2 {
-                font: var(--body-sm);
+                font: var(--body-xs);
+                margin-top: 1rem;
             }
         }
 
@@ -971,17 +972,6 @@ footer {
 @media (max-width: 375px) {
     .hero {
         background: url(../assets/images/book-bg-mobile.png) no-repeat top;
-        
-        & .title {
-            & h1 {
-                font: 700 1.75rem var(--ff-base);
-            }
-
-            & h2 {
-                font: var(--body-xs);
-                margin-top: 1rem;
-            }
-        }
 
         & section {
             & .description {
@@ -1009,30 +999,30 @@ footer {
         & .book-kit {
             & img {
                 &[src*="arrow-1"] {
-                    translate: -5rem -5.5rem;
+                    translate: -6rem -6.5rem;
                 }
     
                 &[src*="arrow-2"] {
-                    translate: -7rem 1.7rem;
+                    translate: -8rem 1.7rem;
                 }
     
                 &[src*="arrow-3"] {
-                    translate: 6rem 6rem;
+                    translate: 7rem 7rem;
                 }
             }
             & span {
                 font: 400 0.625rem "Raleway", sans-serif;
 
                 &.book-text {
-                    translate: -6rem -6.5rem;
+                    translate: -8rem -7.5rem;
                 }
 
                 &.bookmark-text {
-                    translate: 4.8rem 8.2rem;
+                    translate: 5.8rem 9.5rem;
                 }
 
                 &.pin-text {
-                    translate: -6.5rem -0.5rem;
+                    translate: -8rem -1rem;
                 }
             }
         }
