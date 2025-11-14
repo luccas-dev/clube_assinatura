@@ -3,7 +3,7 @@
 É uma Landing Page de um clube de assinatura literário, chamada Encantos Literários. Uma página com diversas animações e transições suaves.
 
 <div align="center">
-  <img src="./assets/images/projeto.png" alt="Imagem do projeto">
+  <img src="./assets/images/projeto.png" width="500px" alt="Imagem do projeto">
 </div>
 
 ## 🚀 Tecnologias
