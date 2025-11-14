@@ -179,7 +179,7 @@
     margin-bottom: 17.375rem;
 
     & .main-text {
-        width: 32.25rem;
+        max-width: 32.25rem;
         margin-inline: auto;
 
         display: grid;
@@ -318,7 +318,7 @@
     }
 
     & .cards {
-        max-width: 65.625rem;
+        width: 65.625rem;
         height: 100vh;
 
         margin-top: 3.5rem;
@@ -796,6 +796,98 @@ footer {
                     translate: -16.75rem -1rem;
                 }
             }
+        }
+    }
+
+    .pricing {
+        & .cards {
+            pointer-events: none;
+            gap: 2rem;
+
+            & .star {
+                display: none;
+            }
+
+            & .card {
+                position: static;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .hero {
+        /* height: 100vh; */
+        padding: 1rem;
+        /* background-size: 400px; */
+
+        & nav {
+            margin-inline: 1rem;
+
+            & .logo {
+                display: none;
+            }
+
+            & .mobile-only {
+                display: block;
+            }
+        }
+
+        & .title {
+            & h1 {
+                font: var(--title-sm);
+            }
+
+            & h2 {
+                font: var(--body-sm);
+            }
+        }
+
+        & section {
+            & .description {
+                pointer-events: none;
+                & p {
+                    font: var(--body-md);
+
+                    & span {
+                        opacity: 1;
+                        filter: saturate(1);
+                    }
+                }
+
+                & img {
+                    opacity: 1;
+                    scale: 1;
+
+                    &[src*="opened-spellbook"] {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        top: 18%;
+                        left: 70%;
+                    }
+
+                    &[src*="ouija-planchette"] {
+                        width: 2rem;
+                        height: 2rem;
+                        top: 53%;
+                        rotate: -150deg;
+                    }
+
+                    &[src*="crystal-ball"] {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        bottom: 35%;
+                        right: 3%;
+                        rotate: 30deg;
+                    }
+                }
+            }
+        }
+    }
+
+    .pricing {
+        & .cards {
+            overflow: hidden;
         }
     }
 }

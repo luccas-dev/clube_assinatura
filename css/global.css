@@ -87,3 +87,7 @@ ul {
 
     padding: 0.75rem 3.25rem;
 }
+
+.mobile-only {
+    display: none;
+}
