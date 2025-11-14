@@ -969,7 +969,7 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
     .hero {
         background: url(../assets/images/book-bg-mobile.png) no-repeat top;
 
